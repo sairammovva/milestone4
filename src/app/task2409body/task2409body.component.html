@@ -1,0 +1,12 @@
+
+
+  <table class="table" *ngFor="let i of data; let j = index">
+    <tbody>
+      <tr>
+        <th scope="row">{{j+1}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.city}}</td>
+      </tr>
+    </tbody>
+  </table>

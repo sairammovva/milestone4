@@ -1,0 +1,35 @@
+<p>header works!</p>
+<p class="block" *ngFor="let item of arr; let i = index">
+  {{2}} * {{item}} = {{2*item}}
+</p>
+Hi
+<!--
+<pre>
+
+{{array | json}}
+
+</pre>
+-->
+<ul class="list-group">
+  <li *ngFor="let item of array" class="list-group-item">
+    {{item.title}}
+    <!--<pre>
+      {{item | json}}
+    </pre>-->
+  </li>
+</ul>
+
+<table>
+  <tr>
+
+  </tr>
+</table>
+
+
+
+
+<style>
+  .block {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+</style>

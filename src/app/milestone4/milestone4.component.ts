@@ -10,20 +10,23 @@ export class Milestone4Component implements OnInit {
     associatename: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
-      Validators.maxLength(30)
+      Validators.maxLength(30),
+      Validators.pattern('[A-Za-z]+')
     ]),
     associateid: new FormControl('', [
       Validators.required,
       Validators.minLength(6),
-      Validators.maxLength(6)
+      Validators.maxLength(6),
+      Validators.pattern('[0-9]+')
     ]),
     projectid: new FormControl('', [
       Validators.required,
-      Validators.minLength(3),
-      Validators.maxLength(30)
+      Validators.minLength(12),
+      Validators.maxLength(12),
+      Validators.pattern('[A-Za-z0-9]+')
     ]),
-    radiolocation: new FormControl(),
-    location: new FormControl(),
+    radiolocation: new FormControl('', Validators.required),
+    location: new FormControl('', Validators.required),
     checkskills: new FormControl(),
     profileupload: new FormControl('', Validators.required),
     comments: new FormControl('', Validators.required),
@@ -41,6 +44,9 @@ export class Milestone4Component implements OnInit {
   }
   get comments() {
     return this.form.get('comments');
+  }
+  get profileupload() {
+    return this.form.get('profileupload');
   }
 
   ngOnInit() {

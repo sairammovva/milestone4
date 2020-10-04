@@ -1,0 +1,28 @@
+{
+  "data": [
+    {
+      "name": "Alpha",
+      "age":22,
+      "qualification":"B.Tech",
+      "experience (in months)": 12
+    },
+    {
+      "name": "Beta",
+      "age":25,
+      "qualification":"B.Com",
+      "experience (in months)": 36
+    },
+    {
+      "name": "Gamma",
+      "age":21,
+      "qualification":"B.Tech",
+      "experience (in months)": 0
+    },
+    {
+      "name": "Delta",
+      "age":24,
+      "qualification":"M.Tech",
+      "experience (in months)": 6
+    }
+  ]
+}

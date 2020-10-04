@@ -1,0 +1,106 @@
+<div class="container">
+  <h1>Form Validation</h1>
+  <form [formGroup]="form">
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Associate Name" formControlName="associatename">
+      <div *ngIf="associatename.touched && associatename.invalid" class="alert alert-danger">
+        <div *ngIf="associatename.errors.required">Please enter Associate Name</div>
+        <div *ngIf="associatename.errors.minlength">Accepts min 5 and max 30 characters</div>
+        <div *ngIf="associatename.errors.maxlength">Accepts min 5 and max 30 characters</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Associate Id" formControlName="associateid">
+      <div *ngIf="associateid.touched && associateid.invalid" class="alert alert-danger">
+        <div *ngIf="associatename.errors.required">
+          <div *ngIf="associateid.errors.required">Please enter Associate Id</div>
+          <div *ngIf="associateid.errors.minlength">Invalid Associate Id (should be 6 characters)</div>
+          <div *ngIf="associateid.errors.maxlength">Invalid Associate Id (should be 6 characters)</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Project Id" formControlName="projectid">
+      <div *ngIf="projectid.touched && projectid.invalid" class="alert alert-danger">
+        <div *ngIf="projectid.errors.required">Please enter Project Id</div>
+        <div *ngIf="projectid.errors.minlength">Invalid Project Id (should be 12 characters)</div>
+        <div *ngIf="projectid.errors.maxlength">Invalid Project Id (should be 12 characters)</div>
+      </div>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+        formControlName="radiolocation">
+      <label class="form-check-label" for="inlineRadio1">Offshore</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"
+        formControlName="radiolocation">
+      <label class="form-check-label" for="inlineRadio2">Onshore</label>
+    </div>
+    <select class="custom-select" formControlName="location">
+      <option selected>Select Location</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+      <label class="form-check-label" for="inlineCheckbox1">HTML5,CSS3,JS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+      <label class="form-check-label" for="inlineCheckbox2">Angular 8</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+      <label class="form-check-label" for="inlineCheckbox3">Express JS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+      <label class="form-check-label" for="inlineCheckbox4">SASS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+      <label class="form-check-label" for="inlineCheckbox5">React JS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="option6">
+      <label class="form-check-label" for="inlineCheckbox6">Node JS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="option7">
+      <label class="form-check-label" for="inlineCheckbox7">ES5,ES6,ES7,...</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="option8">
+      <label class="form-check-label" for="inlineCheckbox8">Veu JS</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="option9">
+      <label class="form-check-label" for="inlineCheckbox9">Mongo DB</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="option10">
+      <label class="form-check-label" for="inlineCheckbox10">Bootstrap 4</label>
+    </div>
+    <div class="form-check form-check-inline" style="width: 32%;">
+      <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="optio11">
+      <label class="form-check-label" for="inlineCheckbox11">Typescript</label>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Upload Profile</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    </div>
+    <div class="form-group">
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Comments"></textarea>
+      <div *ngIf="comments.touched && comments.invalid" class="alert alert-danger">
+        Please enter comments</div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-danger">Resest</button>
+    </div>
+  </form>
+
+
+</div>
